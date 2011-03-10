@@ -8,6 +8,7 @@ Source:         http://znc.in/releases/archive/%{name}-%{_version}.tar.gz
 URL:            http://znc.in/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
+BuildRequires: library/security/openssl
 BuildRequires: c-ares
 
 %description
