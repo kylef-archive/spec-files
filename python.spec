@@ -28,7 +28,7 @@ Python 3 is a new version of the language that is incompatible with the 2.x line
             --with-computed-gotos \
             --enable-ipv6 \
             --with-wide-unicode \
-            --with-system-expat \
+            --with-system-expat
 
 make
 
@@ -36,10 +36,10 @@ make
 rm -rf $RPM_BUILD_ROOT
 make DESTDIR="$RPM_BUILD_ROOT" install
 
-ln -sf python3 %{_bindir}/python
-ln -sf python3-config %{_bindir}/python-config
-ln -sf idle3 %{_bindir}/idle
-ln -sf pydoc3 %{_bindir}/pydoc
+ln -sf python3 $RPM_BUILD_ROOT%{_bindir}/python
+ln -sf python3-config $RPM_BUILD_ROOT%{_bindir}/python-config
+ln -sf idle3 $RPM_BUILD_ROOT%{_bindir}/idle
+ln -sf pydoc3 $RPM_BUILD_ROOT%{_bindir}/pydoc
 
 %clean
 rm -rf $RPM_BUILD_ROOT
